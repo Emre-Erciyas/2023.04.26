@@ -145,7 +145,7 @@ def processVideo(place, startDate, file_path):
 
         # model predicts
         results = model.predict(
-            frame, stream=True, conf=0.2, classes=0, verbose=False)
+            frame, stream=True, conf=0.15, classes=0, verbose=False)
 
         if x >= 60:
             x -= 60
@@ -164,7 +164,7 @@ def processVideo(place, startDate, file_path):
         cv2.imshow('Frame ' + str(i), frame)
 
         # press q to exit
-        if cv2.waitKey(25) & 0xFF == ord('q'):
+        if cv2.waitKey(75) & 0xFF == ord('q'):
             break
 
         x += 1
@@ -575,7 +575,7 @@ def initializeUI():
 
     # Tkinter root
     root = Tk()
-    root.title('Hello')
+    root.title('People Counter')
     root.geometry("1920x1080")
 
     # Title
