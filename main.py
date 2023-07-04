@@ -113,8 +113,6 @@ def write_to_database(place, currentDate, total):
 
 # takes start time and file path and predicts how many people are in the frame.
 # Then writes this information to the database every minute.
-
-
 def processVideo(place, startDate, file_path):
     # Open the video file
     video = cv2.VideoCapture(file_path)
